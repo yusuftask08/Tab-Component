@@ -1,0 +1,65 @@
+.tabs {
+    position: relative;
+
+    &-active_line {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        transition: all 0.3s ease;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-bottom: 2px solid rebeccapurple;
+            top: -5px;
+            z-index: 1;
+        }
+    }
+
+    &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+
+        .tab {
+            position: relative;
+            border-bottom: 1px solid #EBEBE4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 6px 16px;
+            width: 200px;
+        }
+    }
+
+
+}
+
+.disabled {
+    cursor: not-allowed !important;
+    background: rgb(210, 208, 208);
+    color: #EBEBE4;
+    
+    :hover {
+        cursor: not-allowed;
+    }
+
+
+    .tabs-item {
+        background-color: blue;
+        color: #EBEBE4;
+    
+    }
+    .tab {
+        background-color: #000 !important;
+    }
+}
+
+.tab-panel {
+    text-align: left;
+    padding: 10px;
+}
